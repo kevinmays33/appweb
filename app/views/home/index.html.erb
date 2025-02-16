@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row gx-2">
+    <div class="d-none d-md-block col-md-6 ">
+      <div class="border rounded bg-light text center">
+        <%= image_tag("home_logo.png", width: "200") %>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="text-primary border rounded" >
+        <h1>WebApp</h1>
+        <p>Find me in app/views/home/index.html.erb</p>
+        <%= button_to 'Login with Google', user_google_oauth2_omniauth_authorize_path, method: :post, :data => { turbo: "false" } %>
+      </div>
+    </div>
+  </div>
+</div>

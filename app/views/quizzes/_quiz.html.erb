@@ -1,0 +1,7 @@
+<div class="d-flex">
+  <%= quiz.name %>
+  <%= quiz.length %>
+  <%= quiz.topic %>
+  <%= quiz.created_at.strftime("YYYY-MM-DD") %>
+  <%= button_to 'Play', show_quiz_path(quiz), method: :get, class: "btn btn-primary" %>
+</div>

@@ -1,0 +1,12 @@
+<div class="container bg-secondary d-flex justify-content-center align-items-center text-center">
+  <div class="w-50 my-5">
+    <%= form_with model: @quiz do |form| %>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+      <%= form.label :topic %>
+      <%= form.text_field :topic %>
+      <%= form.number_field :length, in: 1.0..10.0, step: 1 %>
+      <%= form.submit %>
+    <% end %>
+  </div>
+</div>

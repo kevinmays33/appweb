@@ -1,0 +1,23 @@
+<div class="container bg-secondary d-flex justify-content-center align-items-center text-center">
+  <div class="w-50 my-5">
+    <div class="question-card w-100 bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
+      <p><%= @quiz.questions.first.text %></p>
+    </div>
+    <div class="timer" style="height: 50px;">
+      <%= turbo_stream_from "games" %>
+    </div>
+    <div class="row g-5">
+      <div class="col-12 col-md-6">
+        <button class="btn btn-primary w-100" style="height: 100px;"><%= @quiz.questions.first.options.first.text %></button>
+      </div>
+      <div class="col-12 col-md-6">
+        <button class="btn btn-primary w-100" style="height: 100px;"><%= @quiz.questions.first.options.second.text %></button>
+      </div>
+      <div class="col-12 col-md-6">
+        <button class="btn btn-primary w-100" style="height: 100px;"><%= @quiz.questions.first.options.third.text %></button>
+      </div>
+      <div class="col-12 col-md-6">
+        <button class="btn btn-primary w-100" style="height: 100px;"><%= @quiz.questions.first.options.fourth.text %></button>
+      </div>
+  </div>
+</div>

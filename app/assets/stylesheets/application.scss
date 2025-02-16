@@ -1,0 +1,16 @@
+// Sassy
+// @import "../node_modules/bootstrap/scss/functions";
+
+
+// $primary: $yellow; // set the $primary variable
+// $secondary: $indigo; // set the $primary variable
+
+// // merge with existing $theme-colors map
+// $theme-colors: map-merge($theme-colors, (
+//   "primary": $primary,
+//   "yellow": $yellow
+// ));
+
+@import "bootstrap";
+@import "components/flash";
+@import "config/animations";
