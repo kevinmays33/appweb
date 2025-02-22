@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get "home/index", as: :home
-  get "quiz/index", as: :user_root
+  get "home/index", as: :home 
+  get "dashboard", to: "dashboard#index", as: :user_root
+  get "quiz/index", as: :quizzes
   get "quiz/new", as: :new_quiz
   post "quiz/create", as: :create_quiz
   get "quiz/show/:id", to: "quiz#show", as: :show_quiz

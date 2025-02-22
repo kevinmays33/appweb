@@ -14,11 +14,12 @@ class QuizzesServices
 
   def quizzify(quiz_content:)
     quiz = Quiz.create(topic: topic, length: length, name: name)
-    create_questions_and_options(quiz: quiz, quiz_content: quiz_content)
+    create_questions(quiz: quiz, quiz_content: quiz_content)
+    binding.pry
     quiz
   end
 
-  def create_questions_and_options(quiz:, quiz_content:)
+  def create_questions(quiz:, quiz_content:)
     quiz_content.each do |quiz_element|
       question = Question.create(
         text: quiz_element["question"],
