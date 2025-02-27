@@ -76,3 +76,4 @@ end
 
 gem "cssbundling-rails", "~> 1.4"
 gem "ruby-openai"
+gem "sidekiq", "~> 7.3"
