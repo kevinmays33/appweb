@@ -16,7 +16,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
-gem 'net-smtp', '~> 0.5.0'
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -41,10 +41,10 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'devise'
-gem 'omniauth-google-oauth2'
+gem "devise"
+gem "omniauth-google-oauth2"
 gem "omniauth-rails_csrf_protection"
-gem 'rubocop-rails', require: false
+gem "rubocop-rails", require: false
 gem "dartsass-rails"
 gem "bootstrap", "~> 5.3.3"
 
@@ -57,11 +57,11 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
-  gem 'rspec-rails', '~> 7.0.0'
-  gem 'factory_bot_rails'
+  gem "rspec-rails", "~> 7.0.0"
+  gem "factory_bot_rails"
 end
 
-gem 'pry'
+gem "pry"
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
