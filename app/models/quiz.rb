@@ -4,7 +4,7 @@ class Quiz < ApplicationRecord
 
   # broadcasts_to ->(quiz) { "quizzes" }, inserts_by: :prepend
 
-  def length 
+  def length
     questions.length
   end
 end

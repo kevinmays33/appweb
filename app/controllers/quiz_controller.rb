@@ -23,7 +23,7 @@ class QuizController < ApplicationController
     @quiz = Quiz.find(params[:id])
   end
 
-  private 
+  private
 
   def quiz_params
     params.require(:quiz).permit(:name, :topic, :length, :name)

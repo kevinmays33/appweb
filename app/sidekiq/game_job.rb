@@ -8,6 +8,6 @@ class GameJob
     while game.remaining_time > 0 do
       sleep 1
       game.update(remaining_time: game.remaining_time - 1)
-    end 
+    end
   end
 end

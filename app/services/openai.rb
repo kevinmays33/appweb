@@ -7,7 +7,7 @@ class Openai
   def initialize(prompt: "", model: "gpt-4o-mini", role: :user)
     @body = {
       model: model,
-      messages: [{ role: role, content: prompt }]
+      messages: [ { role: role, content: prompt } ]
     }
     @uri = URI.parse(OPENAI_COMPLETION_URL)
     @request = build_request
@@ -32,7 +32,7 @@ class Openai
     end
   end
 
-  private 
+  private
 
   def build_request
     request = Net::HTTP::Post.new(
