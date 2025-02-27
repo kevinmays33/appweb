@@ -2,9 +2,9 @@ name: Ruby
 
 on:
   push:
-    branches: [${{ vars.DEFAULTBRANCH }}]
+    branches: [ ${{ vars.DEFAULTBRANCH }} ]
   pull_request:
-    branches: [${{ vars.DEFAULTBRANCH }}]
+    branches: [ ${{ vars.DEFAULTBRANCH }} ]
 
 permissions:
   contents: read
