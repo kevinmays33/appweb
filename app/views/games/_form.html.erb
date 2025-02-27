@@ -1,0 +1,23 @@
+<%= form_with(model: game) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :round_time %>
+  <%= form.number_field :round_time, in: 1.0..10.0, step: 1 %>
+  <%= form.label :quiz %>
+  <%= form.collection_select :quiz_id, Quiz.order(:updated_at), :id, :name %>
+  <% if game.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(game.errors.count, "error") %> prohibited this game from being saved:</h2>
+
+      <ul>
+        <% game.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

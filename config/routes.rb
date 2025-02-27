@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :games
+  resources :quotes
   get "home/index", as: :home 
   get "dashboard", to: "dashboard#index", as: :user_root
   get "quiz/index", as: :quizzes

@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_15_233728) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_27_140013) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "games", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "remaining_time"
+    t.integer "round_time"
+    t.string "name"
+    t.bigint "quiz_id", null: false
+    t.index ["quiz_id"], name: "index_games_on_quiz_id"
+  end
 
   create_table "options", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -36,9 +46,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_15_233728) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "topic"
-    t.integer "length"
     t.string "name"
     t.integer "time_between_question"
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,6 +70,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_15_233728) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "games", "quizzes"
   add_foreign_key "options", "questions"
   add_foreign_key "questions", "quizzes"
 end

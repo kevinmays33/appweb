@@ -27,7 +27,8 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
-
+gem "redis", "~> 4.2"
+gem "simple_form", "~> 5.1.0"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
@@ -56,12 +57,15 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  gem 'rspec-rails', '~> 7.0.0'
+  gem 'factory_bot_rails'
 end
+
+gem 'pry'
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'pry'
 end
 
 group :test do
