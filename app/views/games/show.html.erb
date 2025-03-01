@@ -1,9 +1,18 @@
-<%= turbo_stream_from "timer" %>
 <%= render @game %>
+<div data-controller="game" data-game-game-id-value="<%= @game.id %>">
 
+  <div id="players" data-game-target="players">
+    <%= render @game.users %>
+  </div>
+
+  <div id="" data-game-target="lobby">
+    
+  </div>
+</div>
 <div id="timer">
 
 </div>
+
 <div>
   <%= link_to "Edit this game", edit_game_path(@game) %> |
   <%= link_to "Back to games", games_path %>

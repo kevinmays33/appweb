@@ -8,7 +8,11 @@ class GamesController < ApplicationController
 
   # GET /games/1 or /games/1.json
   def show
-    GameJob.perform_async(@game.id)
+    unless @game.users.include?(current_user)
+      @game.users << current_user
+      @game.save
+    end
+    # GameJob.perform_async(@game.id)
   end
 
   # GET /games/new

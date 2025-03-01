@@ -4,6 +4,6 @@
 
 import { createConsumer } from "@rails/actioncable"
 
-export default createConsumer()
+// export default createConsumer()
 
-createConsumer('http://127.0.0.1/cable')
+// createConsumer('http://127.0.0.1/cable')

@@ -9,5 +9,6 @@ class GameJob
       sleep 1
       game.update(remaining_time: game.remaining_time - 1)
     end
+    game.update(status: :idle)
   end
 end

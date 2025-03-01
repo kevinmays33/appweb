@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [ :google_oauth2 ]
 
+  has_many :user_games
+  has_many :games, through: :user_games
+
   def self.from_google(access_token)
     create_with(
       uid: access_token[:uid],
