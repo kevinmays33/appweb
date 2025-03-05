@@ -28,7 +28,7 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 gem "redis", "~> 4.2"
-gem "simple_form", "~> 5.1.0"
+gem "simple_form", "~> 5.3.1"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
